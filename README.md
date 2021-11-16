@@ -2,11 +2,9 @@
 
 Projekt kontenera bazowego do rozwoju oprogramowania: Laravel
 
+Skopiować plik docker-compose i ustawić porty i hasło do mysql
+cp docker-compose-default.yml docker-compose.yml
+
 # TO_DO
 docker odcinek 6, 1:43 tworzenie composer.dockerfile
 
-do sprawdzenia:
-tomasz@ubuntu-server-1:~/docker-laravel-test$ git add .
-error: open("mysql/ca-key.pem"): Permission denied
-error: unable to index file mysql/ca-key.pem
-fatal: adding files failed
