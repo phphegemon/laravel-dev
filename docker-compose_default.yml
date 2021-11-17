@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
     nginx:
+        container_name: nginx
         build: 
             context: .
             dockerfile: nginx.dockerfile
@@ -13,8 +14,9 @@ services:
             - mysql
             - php
         links:
-            - php:waapi_php_1
+            - php:php8012
     mysql:
+        container_name: mysql57
         image: mysql:5.7
         ports:
             - 3306:3306
@@ -26,13 +28,14 @@ services:
         volumes:
             - ./mysql:/var/lib/mysql
     php:
-        container_name: waapi_php_1
+        container_name: php8012
         build:
             context: .
             dockerfile: php.dockerfile
         volumes:
             - ./src:/var/www/html
     composer:
+        container_name: composer
         build:
             context: .
             dockerfile: composer.dockerfile
