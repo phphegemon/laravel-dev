@@ -13,7 +13,7 @@ Zbudowanie i start kontenerów
 
 *problem z uprawnieniami do folderu mysql*
 
-> sudo chown -R tomasz:docker mysql/
+> sudo chown -R tomasz:docker mysql/  
 > docker-compose up --build
 
 composer update
@@ -38,12 +38,12 @@ artisan migracja poczatkowa
 
 #### composer
 
-> docker-compose run --rm composer update
+> docker-compose run --rm composer update  
 > docker-compose run --rm composer require doctrine/dbal
 
 #### npm
 
-> docker-compose run --rm npm run dev
+> docker-compose run --rm npm run dev  
 > docker-compose run --rm npm run prod
 
 #### artisan
